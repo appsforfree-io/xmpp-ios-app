@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8150AA04252A3A4E00C8EDFF /* XMPPiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA03252A3A4E00C8EDFF /* XMPPiOSAppApp.swift */; };
+		8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */; };
 		8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA05252A3A4E00C8EDFF /* ContentView.swift */; };
 		8150AA08252A3A4F00C8EDFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150AA07252A3A4F00C8EDFF /* Assets.xcassets */; };
 		8150AA0B252A3A4F00C8EDFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150AA0A252A3A4F00C8EDFF /* Preview Assets.xcassets */; };
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		8150AA00252A3A4E00C8EDFF /* XMPPiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8150AA03252A3A4E00C8EDFF /* XMPPiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPiOSAppApp.swift; sourceTree = "<group>"; };
+		8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPiOSApp.swift; sourceTree = "<group>"; };
 		8150AA05252A3A4E00C8EDFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8150AA07252A3A4F00C8EDFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8150AA0A252A3A4F00C8EDFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 		8150AA02252A3A4E00C8EDFF /* XMPPiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				8150AA03252A3A4E00C8EDFF /* XMPPiOSAppApp.swift */,
-				8150AA05252A3A4E00C8EDFF /* ContentView.swift */,
-				8150AA07252A3A4F00C8EDFF /* Assets.xcassets */,
-				8150AA0C252A3A4F00C8EDFF /* Info.plist */,
+				8150AA37252A3B3400C8EDFF /* App */,
+				8150AA35252A3B3400C8EDFF /* Business */,
+				8150AA34252A3B3400C8EDFF /* Common */,
+				8150AA36252A3B3400C8EDFF /* UI */,
 				8150AA09252A3A4F00C8EDFF /* Preview Content */,
 			);
 			path = XMPPiOSApp;
@@ -128,6 +128,38 @@
 				8150AA22252A3A5000C8EDFF /* Info.plist */,
 			);
 			path = XMPPiOSAppUITests;
+			sourceTree = "<group>";
+		};
+		8150AA34252A3B3400C8EDFF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8150AA35252A3B3400C8EDFF /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		8150AA36252A3B3400C8EDFF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8150AA07252A3A4F00C8EDFF /* Assets.xcassets */,
+				8150AA05252A3A4E00C8EDFF /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8150AA37252A3B3400C8EDFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8150AA0C252A3A4F00C8EDFF /* Info.plist */,
+				8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */,
-				8150AA04252A3A4E00C8EDFF /* XMPPiOSAppApp.swift in Sources */,
+				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +453,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"XMPPiOSApp/Preview Content\"";
 				DEVELOPMENT_TEAM = H45WLND3CV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = XMPPiOSApp/Info.plist;
+				INFOPLIST_FILE = XMPPiOSApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +475,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"XMPPiOSApp/Preview Content\"";
 				DEVELOPMENT_TEAM = H45WLND3CV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = XMPPiOSApp/Info.plist;
+				INFOPLIST_FILE = XMPPiOSApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
