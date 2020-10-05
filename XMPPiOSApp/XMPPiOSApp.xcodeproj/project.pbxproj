@@ -13,6 +13,7 @@
 		8150AA0B252A3A4F00C8EDFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150AA0A252A3A4F00C8EDFF /* Preview Assets.xcassets */; };
 		8150AA16252A3A5000C8EDFF /* XMPPiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA15252A3A5000C8EDFF /* XMPPiOSAppTests.swift */; };
 		8150AA21252A3A5000C8EDFF /* XMPPiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA20252A3A5000C8EDFF /* XMPPiOSAppUITests.swift */; };
+		8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		8150AA1C252A3A5000C8EDFF /* XMPPiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMPPiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150AA20252A3A5000C8EDFF /* XMPPiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPiOSAppUITests.swift; sourceTree = "<group>"; };
 		8150AA22252A3A5000C8EDFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +97,11 @@
 		8150AA02252A3A4E00C8EDFF /* XMPPiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				8150AA37252A3B3400C8EDFF /* App */,
-				8150AA35252A3B3400C8EDFF /* Business */,
 				8150AA34252A3B3400C8EDFF /* Common */,
+				8150AA3E252A3C7000C8EDFF /* DataAccess */,
+				8150AA35252A3B3400C8EDFF /* Business */,
 				8150AA36252A3B3400C8EDFF /* UI */,
+				8150AA37252A3B3400C8EDFF /* App */,
 				8150AA09252A3A4F00C8EDFF /* Preview Content */,
 			);
 			path = XMPPiOSApp;
@@ -160,6 +163,14 @@
 				8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		8150AA3E252A3C7000C8EDFF /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			files = (
 				8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */,
 				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
+				8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
