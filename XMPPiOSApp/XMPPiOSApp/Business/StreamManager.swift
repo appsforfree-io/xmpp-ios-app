@@ -5,26 +5,30 @@
 //  Created by Jérémy Oddos on 05/10/2020.
 //
 
-import UIKit
+import Foundation
 
 class StreamManager: NSObject {
     
-    let wsManager: WebSocketManager
+    private let wsManager: WebSocketManager
+    private let environment: Environment
     
-    init(wsManager: WebSocketManager) {
+    init(wsManager: WebSocketManager, environment: Environment) {
         self.wsManager = wsManager
+        self.environment = environment
     }
     
-    func connect() {
+    func connect(user: String) {
         wsManager.connect()
-        let stream = Stream(from: "me", to: "you", id: nil)
+        let stream = Stream(
+            from: "\(user)@\(environment.serverName)",
+            to: environment.serverName,
+            id: nil
+        )
         startStream(stream)
     }
     
     private func startStream(_ stream: Stream) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.wsManager.startStream(stream)
-        }
+        self.wsManager.send(message: .startStream(stream)) { _ in }
     }
     
 }

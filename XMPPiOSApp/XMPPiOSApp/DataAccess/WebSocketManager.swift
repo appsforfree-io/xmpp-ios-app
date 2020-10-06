@@ -7,17 +7,22 @@
 
 import Foundation
 
+enum WebSocketError: Error {
+    case sendError
+}
+
 class WebSocketManager: NSObject {
     
-    private var webSocketTask: URLSessionWebSocketTask?
+    private var webSocketTask: URLSessionWebSocketTask
     
-    func connect() {
-        guard let url = URL(string: "ws://127.0.0.1:8080/xmpp-java-server/xmpp") else { return }
+    init(environment: Environment) {
         let urlSession = URLSession(configuration: .default)
-        webSocketTask = urlSession.webSocketTask(with: url)
-        webSocketTask?.resume()
-        
-        webSocketTask?.receive { result in
+        webSocketTask = urlSession.webSocketTask(with: environment.webSocketURL)
+        super.init()
+    }
+    
+    private func setup() {
+        webSocketTask.receive { result in
             switch result {
             case .success(let message):
                 switch message {
@@ -32,18 +37,19 @@ class WebSocketManager: NSObject {
         }
     }
     
-    func startStream(_ stream: Stream) {
-        do {
-            let message = try URLSessionWebSocketTask.Message.string(StreamEncoder().encode(stream))
-            webSocketTask?.send(message) { error in
-                if let error = error {
-                    print("WebSocket sending error: \(error)")
+    func connect() {
+        webSocketTask.resume()
+    }
+    
+    func send(message: WebSocketMessage, callback: @escaping (Result<Void, WebSocketError>) -> Void) {
+        webSocketTask.send(message.message) { error in
+            DispatchQueue.main.async {
+                if error != nil {
+                    callback(.failure(.sendError))
                 } else {
-                    print("WebSocket message sent !")
+                    callback(.success(()))
                 }
             }
-        } catch {
-            print(error)
         }
     }
     

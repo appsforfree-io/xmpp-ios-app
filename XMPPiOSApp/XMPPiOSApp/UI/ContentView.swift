@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var engine: Engine
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -15,8 +18,7 @@ struct ContentView: View {
     }
     
     private func connect() {
-        let streamManager = StreamManager(wsManager: WebSocketManager())
-        streamManager.connect()
+        engine.streamManager.connect(user: "me")
     }
 }
 

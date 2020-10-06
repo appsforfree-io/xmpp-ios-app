@@ -9,7 +9,7 @@ import UIKit
 
 class StreamEncoder: XMPPEncoder {
     
-    public func encode(_ value: Stream) throws -> String {
+    public func encode(_ value: Stream) -> String {
         return "<stream:stream from=\'\(value.from)\' to=\'\(value.to)\'"
     }
     

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct XMPPiOSAppApp: App {
+    
+    @StateObject var engine: Engine = Engine()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(engine)
         }
     }
 }

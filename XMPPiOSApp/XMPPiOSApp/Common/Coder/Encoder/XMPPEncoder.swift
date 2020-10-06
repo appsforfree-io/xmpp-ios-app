@@ -11,6 +11,6 @@ protocol XMPPEncoder {
     
     associatedtype T
     
-    func encode(_ value: T) throws -> String
+    func encode(_ value: T) -> String
     
 }
