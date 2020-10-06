@@ -6,12 +6,16 @@
 //
 
 import Foundation
+import Combine
 
 enum WebSocketError: Error {
     case sendError
+    case messageError
 }
 
 class WebSocketManager: NSObject {
+    
+    @Published var stream: Stream?
     
     private var webSocketTask: URLSessionWebSocketTask
     
@@ -23,19 +27,37 @@ class WebSocketManager: NSObject {
     }
     
     private func setup() {
-        webSocketTask.receive { result in
+        webSocketTask.receive { [unowned self] result in
             switch result {
             case .success(let message):
-                switch message {
-                case .string(let text):
-                    print(text)
-                case .data(let data):
-                    print(data)
-                }
+                self.handleMessage(message)
             case .failure(let error):
-                print(error.localizedDescription)
+                self.handleMessageError(error)
             }
         }
+    }
+    
+    private func handleMessage(_ message: URLSessionWebSocketTask.Message) {
+        switch message {
+        case .string(let text):
+            decode(message: text)
+        default:
+            break
+        }
+    }
+    
+    private func decode(message: String) {
+        do {
+            if message.starts(with: "<stream:stream") {
+                stream = try StreamDecoder().decode(message)
+            }
+        } catch {
+            
+        }
+    }
+    
+    private func handleMessageError(_ error: Error) {
+        
     }
     
     func connect() {
