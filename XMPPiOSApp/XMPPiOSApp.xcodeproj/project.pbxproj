@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */; };
-		8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA05252A3A4E00C8EDFF /* ContentView.swift */; };
 		8150AA08252A3A4F00C8EDFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150AA07252A3A4F00C8EDFF /* Assets.xcassets */; };
 		8150AA0B252A3A4F00C8EDFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150AA0A252A3A4F00C8EDFF /* Preview Assets.xcassets */; };
 		8150AA16252A3A5000C8EDFF /* XMPPiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA15252A3A5000C8EDFF /* XMPPiOSAppTests.swift */; };
@@ -19,6 +18,8 @@
 		8197EB05252CBB0A00754054 /* WebSocketMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EB04252CBB0A00754054 /* WebSocketMessage.swift */; };
 		8197EB0D252CBE3A00754054 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EB0C252CBE3A00754054 /* Engine.swift */; };
 		8197EB13252CC90E00754054 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EB12252CC90E00754054 /* Environment.swift */; };
+		8197EB1E252CCC7B00754054 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EB1D252CCC7B00754054 /* UserView.swift */; };
+		8197EB26252CCC8800754054 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EB25252CCC8800754054 /* UserViewModel.swift */; };
 		81DFF16D252B30AE006ECE2B /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF16C252B30AE006ECE2B /* Stream.swift */; };
 		81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF174252B3110006ECE2B /* StreamManager.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +44,6 @@
 /* Begin PBXFileReference section */
 		8150AA00252A3A4E00C8EDFF /* XMPPiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150AA03252A3A4E00C8EDFF /* XMPPiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPiOSApp.swift; sourceTree = "<group>"; };
-		8150AA05252A3A4E00C8EDFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8150AA07252A3A4F00C8EDFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8150AA0A252A3A4F00C8EDFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8150AA0C252A3A4F00C8EDFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		8197EB04252CBB0A00754054 /* WebSocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketMessage.swift; sourceTree = "<group>"; };
 		8197EB0C252CBE3A00754054 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		8197EB12252CC90E00754054 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		8197EB1D252CCC7B00754054 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		8197EB25252CCC8800754054 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		81DFF16C252B30AE006ECE2B /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		81DFF174252B3110006ECE2B /* StreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				8150AA07252A3A4F00C8EDFF /* Assets.xcassets */,
-				8150AA05252A3A4E00C8EDFF /* ContentView.swift */,
+				8197EB1A252CCC4500754054 /* User */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -224,6 +226,31 @@
 				8197EB12252CC90E00754054 /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		8197EB1A252CCC4500754054 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8197EB1C252CCC6E00754054 /* View */,
+				8197EB1B252CCC6E00754054 /* ViewModel */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8197EB1B252CCC6E00754054 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8197EB25252CCC8800754054 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8197EB1C252CCC6E00754054 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8197EB1D252CCC7B00754054 /* UserView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		81DFF16B252B309F006ECE2B /* Domain */ = {
@@ -363,9 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8197EB1E252CCC7B00754054 /* UserView.swift in Sources */,
+				8197EB26252CCC8800754054 /* UserViewModel.swift in Sources */,
 				8197EAFA252CB18000754054 /* XMPPEncoder.swift in Sources */,
 				81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */,
-				8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */,
 				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
 				8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */,
 				8197EB05252CBB0A00754054 /* WebSocketMessage.swift in Sources */,

@@ -19,6 +19,7 @@ class WebSocketManager: NSObject {
         let urlSession = URLSession(configuration: .default)
         webSocketTask = urlSession.webSocketTask(with: environment.webSocketURL)
         super.init()
+        setup()
     }
     
     private func setup() {

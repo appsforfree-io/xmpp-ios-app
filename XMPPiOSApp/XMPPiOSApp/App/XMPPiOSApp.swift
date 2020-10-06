@@ -14,7 +14,7 @@ struct XMPPiOSAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(engine)
+            UserView(userViewModel: UserViewModel(engine: engine))
         }
     }
 }
