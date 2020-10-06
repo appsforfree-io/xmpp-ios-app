@@ -14,6 +14,11 @@
 		8150AA16252A3A5000C8EDFF /* XMPPiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA15252A3A5000C8EDFF /* XMPPiOSAppTests.swift */; };
 		8150AA21252A3A5000C8EDFF /* XMPPiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA20252A3A5000C8EDFF /* XMPPiOSAppUITests.swift */; };
 		8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */; };
+		8197EAEF252CB11C00754054 /* StreamEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EAEE252CB11C00754054 /* StreamEncoder.swift */; };
+		8197EAFA252CB18000754054 /* XMPPEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197EAF9252CB18000754054 /* XMPPEncoder.swift */; };
+		81DFF16D252B30AE006ECE2B /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF16C252B30AE006ECE2B /* Stream.swift */; };
+		81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF174252B3110006ECE2B /* StreamManager.swift */; };
+		81DFF17B252B5A00006ECE2B /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF17A252B5A00006ECE2B /* XMLEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		8150AA20252A3A5000C8EDFF /* XMPPiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPiOSAppUITests.swift; sourceTree = "<group>"; };
 		8150AA22252A3A5000C8EDFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		8197EAEE252CB11C00754054 /* StreamEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamEncoder.swift; sourceTree = "<group>"; };
+		8197EAF9252CB18000754054 /* XMPPEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPEncoder.swift; sourceTree = "<group>"; };
+		81DFF16C252B30AE006ECE2B /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		81DFF174252B3110006ECE2B /* StreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamManager.swift; sourceTree = "<group>"; };
+		81DFF17A252B5A00006ECE2B /* XMLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,8 @@
 		8150AA34252A3B3400C8EDFF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8197EAEB252CB0C400754054 /* Coder */,
+				81DFF16B252B309F006ECE2B /* Domain */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -143,6 +155,7 @@
 		8150AA35252A3B3400C8EDFF /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				81DFF174252B3110006ECE2B /* StreamManager.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -171,6 +184,40 @@
 				8150AA3F252A3CA700C8EDFF /* WebSocketManager.swift */,
 			);
 			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		8197EAEB252CB0C400754054 /* Coder */ = {
+			isa = PBXGroup;
+			children = (
+				8197EAEC252CB0E800754054 /* Decoder */,
+				8197EAED252CB0E800754054 /* Encoder */,
+			);
+			path = Coder;
+			sourceTree = "<group>";
+		};
+		8197EAEC252CB0E800754054 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		8197EAED252CB0E800754054 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				8197EAF9252CB18000754054 /* XMPPEncoder.swift */,
+				8197EAEE252CB11C00754054 /* StreamEncoder.swift */,
+				81DFF17A252B5A00006ECE2B /* XMLEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		81DFF16B252B309F006ECE2B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				81DFF16C252B30AE006ECE2B /* Stream.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8197EAFA252CB18000754054 /* XMPPEncoder.swift in Sources */,
+				81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */,
 				8150AA06252A3A4E00C8EDFF /* ContentView.swift in Sources */,
 				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
 				8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */,
+				81DFF17B252B5A00006ECE2B /* XMLEncoder.swift in Sources */,
+				8197EAEF252CB11C00754054 /* StreamEncoder.swift in Sources */,
+				81DFF16D252B30AE006ECE2B /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

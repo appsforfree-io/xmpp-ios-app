@@ -16,14 +16,34 @@ class WebSocketManager: NSObject {
         let urlSession = URLSession(configuration: .default)
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask?.resume()
+        
+        webSocketTask?.receive { result in
+            switch result {
+            case .success(let message):
+                switch message {
+                case .string(let text):
+                    print(text)
+                case .data(let data):
+                    print(data)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
-    func sendMessage() {
-        let message = URLSessionWebSocketTask.Message.string("Hello Socket")
-        webSocketTask?.send(message) { error in
-            if let error = error {
-                print("WebSocket sending error: \(error)")
+    func startStream(_ stream: Stream) {
+        do {
+            let message = try URLSessionWebSocketTask.Message.string(StreamEncoder().encode(stream))
+            webSocketTask?.send(message) { error in
+                if let error = error {
+                    print("WebSocket sending error: \(error)")
+                } else {
+                    print("WebSocket message sent !")
+                }
             }
+        } catch {
+            print(error)
         }
     }
     

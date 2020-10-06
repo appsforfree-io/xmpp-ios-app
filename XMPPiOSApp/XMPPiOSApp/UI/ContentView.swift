@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
-            .padding().onAppear(perform: connect)
+            .padding()
+            .onAppear(perform: connect)
     }
     
     private func connect() {
-        let wsManager = WebSocketManager()
-        wsManager.connect()
-        wsManager.sendMessage()
+        let streamManager = StreamManager(wsManager: WebSocketManager())
+        streamManager.connect()
     }
 }
 
