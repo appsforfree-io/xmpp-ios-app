@@ -13,6 +13,8 @@ class Engine: NSObject, ObservableObject {
     
     let streamManager: StreamManager
     
+    let navigationCoordinator: Navigator
+    
     let environment: Environment
     
     override init() {
@@ -20,6 +22,7 @@ class Engine: NSObject, ObservableObject {
         self.environment = environment
         websocketManager = WebSocketManager(environment: environment)
         streamManager = StreamManager(wsManager: websocketManager, environment: environment)
+        navigationCoordinator = Navigator()
         
         super.init()
     }

@@ -30,6 +30,7 @@ class UserViewModel: NSObject, ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] (stream) in
                 guard stream != nil else { return }
+                self?.engine.navigationCoordinator.navigate(to: .conversations)
                 self?.isLoading = false
             }
             .store(in: &cancellables)

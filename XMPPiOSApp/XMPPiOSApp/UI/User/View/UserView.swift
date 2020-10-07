@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserView: View {
     
+    @EnvironmentObject var navigationCoordinator: Navigator
     @ObservedObject var userViewModel: UserViewModel
     
     var body: some View {
@@ -18,9 +19,14 @@ struct UserView: View {
                     ProgressView().progressViewStyle(CircularProgressViewStyle())
                 } else {
                     TextField("Username", text: $userViewModel.username)
-                    Button("Enter Chat") {
-                        userViewModel.connect()
-                    }
+                    NavigationLink(
+                        destination: Text("Destination"),
+                        isActive: $navigationCoordinator.isConversationsActive,
+                        label: {
+                            Button("Enter Chat") {
+                                userViewModel.connect()
+                            }
+                        })
                 }
             }
             .padding()

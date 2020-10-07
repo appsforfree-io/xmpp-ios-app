@@ -24,6 +24,8 @@
 		81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF174252B3110006ECE2B /* StreamManager.swift */; };
 		81F10628252CDA7D005DF11E /* XMPPDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10627252CDA7D005DF11E /* XMPPDecoder.swift */; };
 		81F1062D252CDAB7005DF11E /* StreamDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F1062C252CDAB7005DF11E /* StreamDecoder.swift */; };
+		81F10632252CEAFB005DF11E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10631252CEAFB005DF11E /* Navigator.swift */; };
+		81F1063A252CEB9B005DF11E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10639252CEB9B005DF11E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		81DFF174252B3110006ECE2B /* StreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamManager.swift; sourceTree = "<group>"; };
 		81F10627252CDA7D005DF11E /* XMPPDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPDecoder.swift; sourceTree = "<group>"; };
 		81F1062C252CDAB7005DF11E /* StreamDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDecoder.swift; sourceTree = "<group>"; };
+		81F10631252CEAFB005DF11E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		81F10639252CEB9B005DF11E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				8150AA07252A3A4F00C8EDFF /* Assets.xcassets */,
+				81F10639252CEB9B005DF11E /* ContentView.swift */,
+				81F10631252CEAFB005DF11E /* Navigator.swift */,
 				8197EB1A252CCC4500754054 /* User */,
 			);
 			path = UI;
@@ -402,10 +408,12 @@
 				81F1062D252CDAB7005DF11E /* StreamDecoder.swift in Sources */,
 				81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */,
 				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
+				81F10632252CEAFB005DF11E /* Navigator.swift in Sources */,
 				8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */,
 				8197EB05252CBB0A00754054 /* WebSocketMessage.swift in Sources */,
 				8197EAEF252CB11C00754054 /* StreamEncoder.swift in Sources */,
 				8197EB0D252CBE3A00754054 /* Engine.swift in Sources */,
+				81F1063A252CEB9B005DF11E /* ContentView.swift in Sources */,
 				81DFF16D252B30AE006ECE2B /* Stream.swift in Sources */,
 				8197EB13252CC90E00754054 /* Environment.swift in Sources */,
 				81F10628252CDA7D005DF11E /* XMPPDecoder.swift in Sources */,
