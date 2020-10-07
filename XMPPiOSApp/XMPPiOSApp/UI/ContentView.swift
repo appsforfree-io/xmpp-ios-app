@@ -2,26 +2,25 @@
 //  ContentView.swift
 //  XMPPiOSApp
 //
-//  Created by Jérémy Oddos on 04/10/2020.
+//  Created by Jérémy Oddos on 06/10/2020.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding().onAppear(perform: connect)
-    }
     
-    private func connect() {
-        let wsManager = WebSocketManager()
-        wsManager.connect()
-        wsManager.sendMessage()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    @EnvironmentObject var navigatorCoordinator: Navigator
+    
+    var body: some View {
+        VStack {
+            switch navigatorCoordinator.page {
+            case .user(let userViewModel):
+                UserView(userViewModel: userViewModel)
+            case .conversations:
+                Text("Conversations")
+            default:
+                ProgressView().progressViewStyle(CircularProgressViewStyle())
+            }
+        }
     }
 }
