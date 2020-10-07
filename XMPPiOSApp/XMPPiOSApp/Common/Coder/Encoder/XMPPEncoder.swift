@@ -5,7 +5,7 @@
 //  Created by Jérémy Oddos on 06/10/2020.
 //
 
-import UIKit
+import Foundation
 
 protocol XMPPEncoder {
     

@@ -26,6 +26,9 @@
 		81F1062D252CDAB7005DF11E /* StreamDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F1062C252CDAB7005DF11E /* StreamDecoder.swift */; };
 		81F10632252CEAFB005DF11E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10631252CEAFB005DF11E /* Navigator.swift */; };
 		81F1063A252CEB9B005DF11E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10639252CEB9B005DF11E /* ContentView.swift */; };
+		81F10684252E258F005DF11E /* MessageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10683252E258F005DF11E /* MessageDecoder.swift */; };
+		81F10689252E259D005DF11E /* MessageEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F10688252E259D005DF11E /* MessageEncoder.swift */; };
+		81F1068E252E25CA005DF11E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F1068D252E25CA005DF11E /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		81F1062C252CDAB7005DF11E /* StreamDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDecoder.swift; sourceTree = "<group>"; };
 		81F10631252CEAFB005DF11E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		81F10639252CEB9B005DF11E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81F10683252E258F005DF11E /* MessageDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDecoder.swift; sourceTree = "<group>"; };
+		81F10688252E259D005DF11E /* MessageEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEncoder.swift; sourceTree = "<group>"; };
+		81F1068D252E25CA005DF11E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,7 @@
 			children = (
 				81F10627252CDA7D005DF11E /* XMPPDecoder.swift */,
 				81F1062C252CDAB7005DF11E /* StreamDecoder.swift */,
+				81F10683252E258F005DF11E /* MessageDecoder.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 			children = (
 				8197EAF9252CB18000754054 /* XMPPEncoder.swift */,
 				8197EAEE252CB11C00754054 /* StreamEncoder.swift */,
+				81F10688252E259D005DF11E /* MessageEncoder.swift */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				81DFF16C252B30AE006ECE2B /* Stream.swift */,
+				81F1068D252E25CA005DF11E /* Message.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -405,13 +414,16 @@
 				8197EB1E252CCC7B00754054 /* UserView.swift in Sources */,
 				8197EB26252CCC8800754054 /* UserViewModel.swift in Sources */,
 				8197EAFA252CB18000754054 /* XMPPEncoder.swift in Sources */,
+				81F1068E252E25CA005DF11E /* Message.swift in Sources */,
 				81F1062D252CDAB7005DF11E /* StreamDecoder.swift in Sources */,
 				81DFF175252B3110006ECE2B /* StreamManager.swift in Sources */,
 				8150AA04252A3A4E00C8EDFF /* XMPPiOSApp.swift in Sources */,
 				81F10632252CEAFB005DF11E /* Navigator.swift in Sources */,
 				8150AA40252A3CA700C8EDFF /* WebSocketManager.swift in Sources */,
+				81F10689252E259D005DF11E /* MessageEncoder.swift in Sources */,
 				8197EB05252CBB0A00754054 /* WebSocketMessage.swift in Sources */,
 				8197EAEF252CB11C00754054 /* StreamEncoder.swift in Sources */,
+				81F10684252E258F005DF11E /* MessageDecoder.swift in Sources */,
 				8197EB0D252CBE3A00754054 /* Engine.swift in Sources */,
 				81F1063A252CEB9B005DF11E /* ContentView.swift in Sources */,
 				81DFF16D252B30AE006ECE2B /* Stream.swift in Sources */,
